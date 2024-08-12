@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AdminPane" prefHeight="759.0" prefWidth="1260.0" styleClass="mainFxmlClass" stylesheets="CSS/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="piddevfinal.Controller.AdminLoginController">
+   <children>
+      <VBox alignment="CENTER" layoutX="393.0" layoutY="270.0" prefHeight="287.0" prefWidth="532.0" spacing="50.0" stylesheets="CSS/Style.css">
+         <children>
+            <JFXTextField fx:id="txtusername" promptText="USERNAME" />
+            <JFXPasswordField fx:id="txtpassword" promptText="MOT DE PASSE" />
+           
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="532.0" spacing="70.0">
+               <children>
+                  <JFXButton fx:id="btnSignIn" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="234.0" text="SE CONNECTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children></VBox>
+      <Label layoutX="509.0" layoutY="134.0" text="Bienvenue! Admin" textFill="#2c2b2b">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btnBack" fitHeight="46.0" fitWidth="45.0" layoutX="56.0" layoutY="671.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Icons/icons8_back_arrow_64px_1.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="1277.0" spacing="10.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/reduce.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnReduce" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/grandir.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Label id="lblerror" fx:id="lblerror" layoutX="702.0" layoutY="486.0" prefHeight="20.0" prefWidth="389.0" stylesheets="CSS/Style.css" textFill="#b22121">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

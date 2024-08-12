@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AdminDashBoardPane" fx:id="ClientHomepage" prefHeight="774.0" prefWidth="1352.0" styleClass="mainFxmlClass" stylesheets="CSS/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="piddevfinal.Controller.ClientHomepageController">
+   <children>
+      <VBox id="MenuVbox" alignment="CENTER_LEFT" prefHeight="792.0" prefWidth="301.0">
+         <children>
+            <Pane prefHeight="158.0" prefWidth="307.0">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="153.0" layoutX="61.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/Logo%20White.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="5.0" layoutX="10.0" layoutY="258.0" lineSpacing="15.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="60.0" prefWidth="291.0" text="Homepage">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_home_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnClients" alignment="BASELINE_LEFT" graphicTextGap="5.0" lineSpacing="15.0" mnemonicParsing="false" onAction="#toProfile" prefHeight="60.0" prefWidth="291.0" text="Profil">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_account_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnMentors" alignment="BASELINE_LEFT" graphicTextGap="15.0" lineSpacing="50.0" mnemonicParsing="false" onAction="#toToDoList" prefHeight="60.0" prefWidth="408.0" text="To-do List">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_tasklist_64px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnExercices" alignment="BASELINE_LEFT" graphicTextGap="15.0" lineSpacing="50.0" mnemonicParsing="false" onAction="#toCours" prefHeight="60.0" prefWidth="408.0" text="Formation">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_meditation_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReservation" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="10.0" layoutY="540.0" lineSpacing="50.0" mnemonicParsing="false" onAction="#toReservation" prefHeight="60.0" prefWidth="408.0" text="Mes Reservations">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_planner_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnLogout" alignment="BASELINE_LEFT" graphicTextGap="15.0" lineSpacing="50.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="60.0" prefWidth="408.0" text="Se déconnecter">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_logout_rounded_left_64px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_RIGHT" layoutX="6.0" layoutY="3.0" prefHeight="40.0" prefWidth="1345.0" spacing="10.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/reduce.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnReduce" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/grandir.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Pane fx:id="ReservationPane" layoutX="303.0" layoutY="50.0" prefHeight="735.0" prefWidth="1048.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <TextField fx:id="id_client1" disable="true" editable="false" layoutX="4.0" layoutY="27.0" prefHeight="25.0" prefWidth="29.0" />
+            <Pane layoutX="4.0" prefHeight="60.0" prefWidth="1048.0" style="-fx-background-color: #91e291;">
+               <children>
+                  <Label layoutX="14.0" layoutY="-4.0" prefHeight="68.0" prefWidth="380.0" text="Mes Reservations" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="lblajout1" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="148.0" prefHeight="21.0" prefWidth="270.0" textAlignment="CENTER" textFill="#f84b4b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="res" layoutX="3.0" layoutY="76.0" onAction="#reserver" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: green;" text="Reserver" />
+            <TextField fx:id="Recherche" layoutX="564.0" layoutY="78.0" prefHeight="37.0" prefWidth="490.0" promptText="Rechercher" />
+            <JFXButton fx:id="Enregistrer" layoutX="175.0" layoutY="76.0" onAction="#PDF" prefHeight="40.0" prefWidth="153.0" style="-fx-background-color: #ff9242;" text="Enregistrer PDF" />
+            <JFXButton fx:id="Statistique" layoutX="339.0" layoutY="76.0" onAction="#ChartStat" prefHeight="40.0" prefWidth="199.0" style="-fx-background-color: red;" text="Chart Statistique" />
+            <TableView fx:id="tableEvenements" layoutX="14.0" layoutY="169.0" onMouseClicked="#MouseAction" onMousePressed="#MouseAction" prefHeight="282.0" prefWidth="524.0">
+               <columns>
+                  <TableColumn fx:id="c_id" editable="false" prefWidth="72.0" text="Id" />
+                  <TableColumn fx:id="c_nom" editable="false" minWidth="0.0" prefWidth="106.0" text="Nom" />
+                  <TableColumn fx:id="c_Organisateur" editable="false" prefWidth="115.0" text="Organisateur" />
+                  <TableColumn fx:id="c_Date_Deb" editable="false" minWidth="0.0" prefWidth="119.0" text="Date_Debut" />
+                  <TableColumn fx:id="c_Date_Fin" editable="false" prefWidth="114.0" text="Date_Fin" />
+                  <TableColumn fx:id="c_type" editable="false" minWidth="0.0" prefWidth="114.0" text="Type" />
+                  <TableColumn fx:id="CapaciteRes" prefWidth="118.0" text="Capacite" />
+                  <TableColumn fx:id="Cp_Image" prefWidth="113.0" text="Image" />
+                  <TableColumn fx:id="cp_Path" prefWidth="123.0" text="Path" />
+               </columns>
+            </TableView>
+            <ImageView fx:id="Ev_res_Image" fitHeight="291.0" fitWidth="422.0" layoutX="598.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXTextField fx:id="IdReservation" layoutX="604.0" layoutY="550.0" promptText="IdRes" />
+            <JFXTextField fx:id="TypeResEv" disable="true" editable="false" layoutX="290.0" layoutY="629.0" promptText="TypeEvRes" />
+            <JFXTextField fx:id="NomEvReservation" disable="true" editable="false" layoutX="19.0" layoutY="629.0" prefHeight="37.0" prefWidth="169.0" promptText="NomEvRes" />
+            <JFXTextField fx:id="Matricule" disable="true" editable="false" layoutX="19.0" layoutY="550.0" prefWidth="169.0" />
+            <JFXTextField fx:id="ID_EVE" disable="true" editable="false" layoutX="604.0" layoutY="629.0" promptText="Id_Evenement" />
+            <JFXTextField fx:id="CapFild" disable="true" editable="false" layoutX="290.0" layoutY="550.0" promptText="Capacite" />
+         </children>
+      </Pane>
+      <Pane fx:id="ProfilPane" layoutX="305.0" layoutY="54.0" prefHeight="727.0" prefWidth="1025.0" visible="false">
+         <children>
+            <Pane layoutX="-3.0" prefHeight="123.0" prefWidth="1002.0" style="-fx-background-color: #91e291;">
+               <children>
+                  <Label layoutX="346.0" layoutY="62.0" prefHeight="68.0" prefWidth="310.0" text="Modifier Profil" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox alignment="CENTER_LEFT" layoutX="81.0" layoutY="147.0" prefHeight="568.0" prefWidth="873.0" spacing="30.0">
+               <children>
+                  <JFXTextField fx:id="Rusername" prefHeight="35.0" promptText="USERNAME" />
+                  <JFXTextField fx:id="Remail" prefHeight="35.0" promptText="ADRESSE EMAIL" />
+                  <JFXPasswordField fx:id="Rpassword" labelFloat="true" prefHeight="35.0" promptText="MOT DE PASSE" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="453.0" spacing="70.0">
+                     <children>
+                        <JFXTextField fx:id="Rnom" prefHeight="35.0" prefWidth="183.0" promptText="NOM" />
+                        <JFXTextField fx:id="Rprenom" prefHeight="35.0" prefWidth="183.0" promptText="PRENOM" />
+                     </children>
+                  </HBox>
+                  <JFXDatePicker fx:id="RdateNai" prefHeight="35.0" prefWidth="229.0" promptText="DATE DE NAISSANCE" />
+                  <HBox prefHeight="23.0" prefWidth="263.0" spacing="100.0">
+                     <children>
+                        <JFXRadioButton fx:id="registerMale" selected="true" text="HOMME">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Sexe" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="registerFemale" lineSpacing="50.0" text="FEMME" toggleGroup="$Sexe" />
+                     </children>
+                  </HBox>
+                  <JFXTextArea fx:id="Radresse" prefHeight="35.0" prefWidth="453.0" promptText="ADRESSE (OPTIONEL)" />
+                  <JFXTextField fx:id="Rtel" prefHeight="35.0" promptText="NUMERO DE TELEPHONE (OPTIONEL)" />
+                  <JFXPasswordField fx:id="Rpassword1" labelFloat="true" layoutX="10.0" layoutY="148.0" prefHeight="35.0" promptText="SAISIR VOTRE MOT DE PASSE ACTUEL" />
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="873.0" spacing="50.0">
+                     <children>
+                        <JFXButton fx:id="BTNSignUp" onAction="#Update" prefHeight="40.0" prefWidth="158.0" text="MODIFIER">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="buttonReset" fx:id="btnDelete" onAction="#Delete" prefHeight="40.0" prefWidth="221.0" text="DESACTIVER">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label id="lblerror" fx:id="lblregister" layoutX="303.0" layoutY="123.0" prefWidth="425.0" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <Pane fx:id="ToDolistPane" layoutX="328.0" layoutY="40.0" prefHeight="742.0" prefWidth="1010.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <TableView fx:id="tableTodolist" editable="true" layoutX="14.0" layoutY="350.0" onMouseClicked="#getSelected" prefHeight="378.0" prefWidth="948.0">
+               <columns>
+                  <TableColumn fx:id="cd_id" editable="false" prefWidth="30.0" text="ID" visible="false" />
+                  <TableColumn fx:id="cd_username" editable="false" prefWidth="93.0" text="Username" visible="false" />
+                  <TableColumn fx:id="cd_titre" editable="false" prefWidth="300.0" text="Titre" />
+                  <TableColumn fx:id="cd_description" editable="false" minWidth="0.0" prefWidth="458.0" text="Description" />
+                  <TableColumn fx:id="cd_datecreated" editable="false" minWidth="0.0" prefWidth="189.0" text="crée en" />
+               </columns>
+            </TableView>
+            <JFXButton id="btnBlue" fx:id="btnModifytodo" layoutX="355.0" layoutY="299.0" onAction="#ModifierTache" prefHeight="37.0" prefWidth="301.0" style="-fx-background-color: #80BECA;" text="Modifier la tâche">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_pencil_drawing_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="btnRed" fx:id="btnDeletetodo" layoutX="670.0" layoutY="299.0" onAction="#SupprimerTache" prefHeight="37.0" prefWidth="291.0" style="-fx-background-color: #FD8269;" text="Supprimer la tâche">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_trash_64px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="btnOrange" fx:id="btnAddTodo" layoutX="14.0" layoutY="299.0" onAction="#AjouterTache" prefHeight="37.0" prefWidth="317.0" style="-fx-background-color: #ff9242;" text="Ajouter une tâche">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8_add_64px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="txttitre" layoutX="14.0" layoutY="170.0" prefWidth="948.0" promptText="Titre" />
+            <JFXTextArea fx:id="txtdescription" layoutX="14.0" layoutY="218.0" prefHeight="60.0" prefWidth="948.0" promptText="Description" style="-jfx-label-float: false;" />
+            <TextField fx:id="id_client" disable="true" editable="false" layoutX="4.0" layoutY="27.0" prefHeight="25.0" prefWidth="29.0" />
+            <Pane layoutX="5.0" layoutY="25.0" prefHeight="123.0" prefWidth="1002.0" style="-fx-background-color: #91e291;">
+               <children>
+                  <Label layoutX="311.0" layoutY="62.0" prefHeight="68.0" prefWidth="380.0" text="Ajouter une tâche" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="lblajout" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="148.0" prefHeight="21.0" prefWidth="270.0" textAlignment="CENTER" textFill="#f84b4b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="HomepagePane" layoutX="328.0" layoutY="47.0" prefHeight="735.0" prefWidth="1010.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Button id="button3" alignment="BOTTOM_CENTER" layoutX="165.0" layoutY="336.0" mnemonicParsing="false" onAction="#toProfile" prefHeight="134.0" prefWidth="174.0" style="-fx-font-size: 30; -fx-border-color: #3C7453;" text="Profil" />
+            <Button id="button3" alignment="BOTTOM_CENTER" layoutX="355.0" layoutY="336.0" mnemonicParsing="false" onAction="#toToDoList" prefHeight="134.0" prefWidth="174.0" style="-fx-font-size: 30; -fx-border-color: #3C7453;" text="To-do" />
+            <ImageView fitHeight="64.0" fitWidth="66.0" layoutX="407.0" layoutY="354.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_tasklist_64px_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="66.0" layoutX="600.0" layoutY="354.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_cutlery_64px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="66.0" layoutX="600.0" layoutY="518.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_news_64px_1.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="28.0" layoutY="90.0" prefHeight="158.0" prefWidth="942.0" style="-fx-background-color: #FFB681;">
+               <children>
+                  <Label fx:id="lblusername11" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="100.0" prefHeight="64.0" prefWidth="496.0" text="Bienvenue! sur notre application" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblusername" contentDisplay="CENTER" layoutX="14.0" layoutY="68.0" prefHeight="64.0" prefWidth="702.0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="43.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="lblusername111" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="257.0" prefHeight="64.0" prefWidth="718.0" text="Qu'est-ce que tu as envie de faire aujourd'hui?" textAlignment="CENTER" textFill="#084602">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="66.0" layoutX="220.0" layoutY="354.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/icons8_writer_male_64px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="lblidclient" contentDisplay="CENTER" layoutX="314.0" layoutY="40.0" prefHeight="31.0" prefWidth="29.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Label>
+      <Pane fx:id="coursPane" layoutX="350.0" layoutY="54.0" prefHeight="687.0" prefWidth="966.0">
+         <children>
+            <Pane layoutX="-3.0" layoutY="14.0" prefHeight="123.0" prefWidth="966.0" style="-fx-background-color: #91e291;">
+               <children>
+                  <Label layoutX="311.0" layoutY="62.0" prefHeight="68.0" prefWidth="516.0" text="Liste des Formations" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TableView fx:id="CoursTable" editable="true" layoutX="21.0" layoutY="155.0" onMouseClicked="#getSelected" prefHeight="513.0" prefWidth="210.0">
+               <columns>
+                  <TableColumn fx:id="coursnameColumn" prefWidth="209.0" text="Formation" />
+               </columns>
+            </TableView>
+            <TableView fx:id="exerciceTable" editable="true" layoutX="270.0" layoutY="155.0" onMouseClicked="#getSelected" prefHeight="513.0" prefWidth="210.0">
+               <columns>
+                  <TableColumn fx:id="exerciceNomColumn" prefWidth="209.0" text="Liste des Membres" />
+               </columns>
+            </TableView>
+            <Pane fx:id="exerciceDetailsPane" layoutX="511.0" layoutY="155.0" prefHeight="513.0" prefWidth="450.0">
+               <children>
+                  <Label fx:id="titreExercice" layoutX="14.0" layoutY="23.0" prefHeight="21.0" prefWidth="140.0" text="Titre de formation: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="niveauExercice" layoutX="14.0" layoutY="78.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgExercice" fitHeight="235.0" fitWidth="340.0" layoutX="55.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="descExercice" layoutX="14.0" layoutY="160.0" text="Description de formation : ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

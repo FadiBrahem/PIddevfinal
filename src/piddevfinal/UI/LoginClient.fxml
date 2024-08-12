@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ClientPane" prefHeight="759.0" prefWidth="1260.0" styleClass="mainFxmlClass" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="piddevfinal.Controller.LoginClientController">
+   <children>
+      <ImageView fx:id="btnBack" fitHeight="41.0" fitWidth="46.0" layoutX="31.0" layoutY="696.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/jar/PIDEV/src/Icons/icons8_back_arrow_64px_1.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="TOP_RIGHT" layoutX="7.0" layoutY="5.0" prefHeight="40.0" prefWidth="1245.0" spacing="10.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Desktop/jar/PIDEV/src/Icons/reduce.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnReduce" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Desktop/jar/PIDEV/src/Icons/grandir.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Desktop/jar/PIDEV/src/Icons/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Label id="lblerror" fx:id="lblregister" layoutX="117.0" layoutY="141.0" prefWidth="585.0" textAlignment="CENTER" />
+      <Pane fx:id="paneForgotPass" layoutX="24.0" layoutY="141.0" prefHeight="556.0" prefWidth="599.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="128.0" prefHeight="51.0" prefWidth="302.0" text="Forgot Password">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="106.0" layoutY="189.0" prefHeight="308.0" prefWidth="389.0" spacing="45.0">
+               <children>
+                  <JFXTextField fx:id="txtforgotemail" focusColor="#3f7a57" labelFloat="true" prefHeight="40.0" prefWidth="324.0" promptText="USERNAME" />
+                  <JFXButton fx:id="BTNsendcode" onAction="#Send" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" text="SEND CODE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="button2" fx:id="btnSignIn1" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" text="BACK">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label id="lblerror" fx:id="lblregister2" layoutX="121.0" layoutY="282.0" prefHeight="20.0" prefWidth="389.0" textFill="#b22121">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneForgotPass1" layoutX="24.0" layoutY="141.0" prefHeight="556.0" prefWidth="599.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="128.0" prefHeight="51.0" prefWidth="302.0" text="Forgot Password">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="106.0" layoutY="189.0" prefHeight="308.0" prefWidth="389.0" spacing="45.0">
+               <children>
+                  <JFXTextField fx:id="txtcode" focusColor="#3f7a57" labelFloat="true" prefHeight="40.0" prefWidth="324.0" promptText="CODE" />
+                  <JFXButton fx:id="BTNsendcode1" onAction="#Send" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" text="OK">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="button2" fx:id="btnSignIn11" onAction="#toforgotpass" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" text="BACK">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label id="lblerror" fx:id="lblregister2" layoutX="121.0" layoutY="282.0" prefHeight="20.0" prefWidth="389.0" textFill="#b22121">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneForgotPass2" layoutX="24.0" layoutY="141.0" prefHeight="556.0" prefWidth="599.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="128.0" prefHeight="51.0" prefWidth="302.0" text="Forgot Password">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="106.0" layoutY="189.0" prefHeight="308.0" prefWidth="389.0" spacing="45.0">
+               <children>
+                  <JFXPasswordField fx:id="txtnewpassword" promptText="NOUVEAU PASSWORD" />
+                  <JFXPasswordField fx:id="txtnewpassword2" layoutX="10.0" layoutY="59.0" promptText="REPETER PASSWORD" />
+                  <JFXButton fx:id="BTNsendcode11" onAction="#updatepassword" prefHeight="40.0" prefWidth="243.0" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" text="CHANGER PASSWORD">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="button2" fx:id="btnSignIn111" onAction="#toforgotpass" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" text="BACK">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label id="lblerror" fx:id="lblnewpassword" layoutX="105.0" layoutY="335.0" prefHeight="20.0" prefWidth="389.0" textFill="#b22121">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneSignUp" layoutX="14.0" layoutY="138.0" prefHeight="556.0" prefWidth="599.0" style="-fx-background-color: white;">
+         <children>
+            <VBox alignment="CENTER_LEFT" layoutX="73.0" layoutY="38.0" prefHeight="465.0" prefWidth="453.0" spacing="30.0">
+               <children>
+                  <JFXTextField fx:id="Rusername" prefHeight="35.0" promptText="USERNAME" />
+                  <JFXTextField fx:id="Remail" prefHeight="35.0" promptText="ADRESSE EMAIL" />
+                  <JFXPasswordField fx:id="Rpassword" labelFloat="true" prefHeight="35.0" promptText="MOT DE PASSE" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="453.0" spacing="70.0">
+                     <children>
+                        <JFXTextField fx:id="Rnom" prefHeight="35.0" prefWidth="183.0" promptText="NOM" />
+                        <JFXTextField fx:id="Rprenom" prefHeight="35.0" prefWidth="183.0" promptText="PRENOM" />
+                     </children>
+                  </HBox>
+                  <JFXDatePicker fx:id="RdateNai" prefHeight="35.0" promptText="DATE DE NAISSANCE" />
+                  <HBox prefHeight="23.0" prefWidth="263.0" spacing="100.0">
+                     <children>
+                        <JFXRadioButton fx:id="registerMale" selected="true" text="HOMME">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Sexe" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="registerFemale" lineSpacing="50.0" text="FEMME" toggleGroup="$Sexe" />
+                     </children>
+                  </HBox>
+                  <JFXTextArea fx:id="Radresse" prefHeight="35.0" prefWidth="453.0" promptText="ADRESSE (OPTIONEL)" />
+                  <JFXTextField fx:id="Rtel" prefHeight="35.0" promptText="NUMERO DE TELEPHONE (OPTIONEL)" />
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="453.0" spacing="50.0">
+                     <children>
+                        <JFXButton fx:id="BTNSignUp" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="158.0" text="S'INSCRIRE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton id="buttonReset" fx:id="btnReset" onAction="#ClearChamps" prefHeight="40.0" prefWidth="158.0" text="RESET">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <JFXButton id="button1" fx:id="btnSignIn" layoutX="83.0" layoutY="512.0" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="434.0" text="VOUS AVEZ UN COMPTE ? SE CONNECTER" textFill="#3f7a57">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label id="lblerror" fx:id="lblregister" layoutX="112.0" layoutY="6.0" prefHeight="20.0" prefWidth="389.0" textFill="#b22121">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneLogin" layoutX="14.0" layoutY="131.0" prefHeight="556.0" prefWidth="599.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="128.0" prefHeight="51.0" prefWidth="204.0" text="Bienvenue! ">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="106.0" layoutY="189.0" prefHeight="308.0" prefWidth="389.0" spacing="45.0">
+               <children>
+                  <JFXTextField fx:id="txtusername" focusColor="#3f7a57" labelFloat="true" prefHeight="40.0" prefWidth="324.0" promptText="USERNAME" />
+                  <JFXPasswordField fx:id="txtpassword" promptText="MOT DE PASSE" />
+                  <JFXButton fx:id="BTNSignIn" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="150.0" stylesheets="@../../../../../../Desktop/jar/PIDEV/src/CSS/Style.css" text="SE CONNECTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton id="button1" fx:id="btnSignUp" layoutX="84.0" layoutY="474.0" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="434.0" text="VOUS N'AVEZ PAS DE COMPTE? S'INSCRIRE!" textFill="#3f7a57">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Hyperlink fx:id="ForgotPass" layoutX="354.0" layoutY="364.0" onAction="#handleButtonAction" prefHeight="28.0" prefWidth="150.0" text="Mot de passe oublié ?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+            <Label id="lblerror" fx:id="lblerror" layoutX="105.0" layoutY="384.0" prefHeight="20.0" prefWidth="389.0" textFill="#b22121">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

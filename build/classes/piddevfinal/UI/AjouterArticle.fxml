@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AjouterArticlePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="734.0" stylesheets="CSS/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="piddevfinal.Controller.AjouterArticleController">
+   <children>
+      <Pane layoutX="-6.0" layoutY="37.0" prefHeight="121.0" prefWidth="746.0" style="-fx-background-color: #91e291;">
+         <children>
+            <Label layoutX="162.0" layoutY="59.0" prefHeight="68.0" prefWidth="423.0" text="Ajouter un Article" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox alignment="CENTER_LEFT" layoutX="78.0" layoutY="184.0" prefHeight="620.0" prefWidth="578.0" spacing="30.0">
+         <children>
+            <JFXTextField fx:id="tfTitleAjout" prefHeight="35.0" promptText="TITRE" />
+            <JFXTextArea fx:id="tfDescriptionAjout" prefHeight="220.0" prefWidth="578.0" promptText="DESCRIPTION" />
+            <JFXComboBox fx:id="tfCategorie" labelFloat="true" prefHeight="40.0" prefWidth="583.0" promptText="CATEGORIE" visibleRowCount="2" />
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="453.0" spacing="50.0">
+               <children>
+                  <JFXButton fx:id="btnAjout" onAction="#handleClicks" prefHeight="40.0" prefWidth="158.0" text="AJOUTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="buttonReset" fx:id="btnReset" onAction="#handleClicks" prefHeight="40.0" prefWidth="158.0" text="RESET">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_RIGHT" layoutX="-1.0" layoutY="3.0" prefHeight="40.0" prefWidth="734.0" spacing="10.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/reduce.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnReduce" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/grandir.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleMouseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Label id="lblerror" fx:id="lblregister" layoutX="149.0" layoutY="170.0" prefWidth="585.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
